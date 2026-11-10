@@ -32,7 +32,7 @@ export async function deliverWebhook(event, fax) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent': 'Faxline-Webhooks/1.0',
+        'User-Agent': 'Telno-Faxline-Webhooks/1.0',
         'X-Faxline-Event': event,
         'X-Faxline-Signature': `sha256=${signature}`,
       },

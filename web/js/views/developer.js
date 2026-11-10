@@ -42,7 +42,7 @@ export async function render(ctx) {
     <header class="page-head">
       <div class="page-head__text">
         <p class="eyebrow">Developer</p>
-        <h1 class="page-title">Build on Faxline</h1>
+        <h1 class="page-title">Build on Telno Faxline</h1>
         <p class="page-sub">A single REST surface with key authentication, signed provider callbacks and a simulator so you can integrate before you have a carrier.</p>
       </div>
       <div class="page-head__actions">
@@ -385,7 +385,7 @@ function openKeyModal(ctx) {
       secretBox.innerHTML = `<p class="field__label">Secret for ${esc(apiKey.name)}</p>
         <div class="secret-reveal"><code>${esc(key)}</code>
           <button class="icon-btn" type="button" data-copy-secret aria-label="Copy secret">${icon('copy', 14)}</button></div>
-        <p class="field__hint">Store it now — Faxline only keeps a hash.</p>`;
+        <p class="field__hint">Store it now — Telno Faxline only keeps a hash.</p>`;
       secretBox.querySelector('[data-copy-secret]').addEventListener('click', async () => {
         const ok = await copyText(key);
         toast[ok ? 'success' : 'error'](ok ? 'Secret copied' : 'Could not copy');

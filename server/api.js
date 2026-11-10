@@ -312,7 +312,7 @@ const routes = [
           at: nowIso(),
           status: scheduledAt ? 'scheduled' : 'queued',
           label: scheduledAt ? 'Scheduled' : 'Queued',
-          detail: scheduledAt ? `Scheduled for ${scheduledAt}` : 'Accepted by Faxline',
+          detail: scheduledAt ? `Scheduled for ${scheduledAt}` : 'Accepted by Telno Faxline',
         },
       ],
     });

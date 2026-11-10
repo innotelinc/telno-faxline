@@ -1,9 +1,9 @@
 {
-  "name": "faxline",
+  "name": "telno-faxline",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Faxline — an all-in-one fax platform: compose, send, receive, and audit faxes with a server-rendered document engine and pluggable provider adapters.",
+  "description": "Telno Faxline — an all-in-one fax platform: compose, send, receive, and audit faxes with a server-rendered document engine and pluggable provider adapters.",
   "engines": {
     "node": ">=22.5.0"
   },

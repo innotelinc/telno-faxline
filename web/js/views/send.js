@@ -129,7 +129,7 @@ export async function render(ctx) {
             <div class="field" data-schedule-field hidden style="margin-top:8px">
               <label class="field__label" for="send-schedule">Send at</label>
               <input class="input" type="datetime-local" id="send-schedule" value="${localInputValue(defaultSchedule)}" />
-              <p class="field__hint">Faxline releases the fax from the scheduler and keeps retrying inside the next business window.</p>
+              <p class="field__hint">Telno Faxline releases the fax from the scheduler and keeps retrying inside the next business window.</p>
             </div>
           </div>
           <div class="form-error" data-form-error hidden></div>

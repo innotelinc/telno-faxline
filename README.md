@@ -1,11 +1,13 @@
-# Faxline
+# Telno Faxline
+
+[![CI](https://github.com/innotelinc/telno-faxline/actions/workflows/ci.yml/badge.svg)](https://github.com/innotelinc/telno-faxline/actions/workflows/ci.yml)
 
 An all-in-one fax platform: compose, transmit, receive, and audit faxes from one
 interface — with a server-rendered document engine, live status streaming, an
 API, and pluggable provider adapters.
 
-Faxline runs on **Node.js 22.5+ with zero npm dependencies**. Persistence uses
-the built-in `node:sqlite` module, so `npm start` is the whole install step.
+Telno Faxline runs on **Node.js 22.5+ with zero npm dependencies**. Persistence
+uses the built-in `node:sqlite` module, so `npm start` is the whole install step.
 
 ```bash
 npm start          # http://127.0.0.1:4321
@@ -15,6 +17,12 @@ npm run check      # syntax-check the server modules
 
 The first boot seeds a 30-day demo workspace (numbers, contacts, 49 faxes,
 activity log) so every screen is populated immediately.
+
+## Screenshots
+
+![Overview dashboard with delivery KPIs, volume chart and recent faxes](docs/screenshots/overview.png)
+
+![Compose screen with cover-page preview, attachments and cost estimate](docs/screenshots/send.png)
 
 ## What it does
 
@@ -73,8 +81,9 @@ Also used when live: `FAX_FROM_NUMBER` (override sender), `PUBLIC_BASE_URL`
 (callback URL handed to providers), `FAX_WEBHOOK_SECRET` (verifies inbound
 provider callbacks; falls back to the workspace webhook secret).
 
-If a live provider is requested but not configured, Faxline falls back to the
-simulator and says so on the Developer page — no silent failures, no crashes.
+If a live provider is requested but not configured, Telno Faxline falls back to
+the simulator and says so on the Developer page — no silent failures, no
+crashes.
 
 Provider callbacks: `POST /api/webhooks/provider` with
 `X-Faxline-Signature: sha256=<hmac>` over the raw body. Accepted statuses map to
@@ -109,3 +118,5 @@ Live updates stream from `GET /api/stream` (`fax.created`, `fax.updated`,
 - Webhook delivery is a single attempt; the delivery log records the outcome.
 - Retention settings are stored and surfaced in the UI, but no automatic purge
   job runs yet.
+- The SQLite file and the outbound signature header keep their original
+  `faxline` names so existing databases and provider integrations keep working.

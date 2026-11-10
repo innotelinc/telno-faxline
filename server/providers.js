@@ -13,7 +13,7 @@ const env = (key) => String(process.env[key] ?? '').trim();
 
 const simulator = {
   id: 'simulator',
-  name: 'Faxline Simulator',
+  name: 'Telno Faxline Simulator',
   mode: 'simulated',
   docsUrl: 'https://example.com/faxline/providers',
   requiredEnv: [],

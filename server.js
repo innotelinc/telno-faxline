@@ -125,7 +125,7 @@ resumePending();
 server.listen(PORT, HOST, () => {
   const provider = process.env.FAX_PROVIDER || 'simulator';
   console.log('');
-  console.log('  Faxline is running');
+  console.log('  Telno Faxline is running');
   console.log(`  → http://${HOST}:${PORT}`);
   console.log(`  provider: ${provider}   database: data/faxline.db`);
   console.log('');

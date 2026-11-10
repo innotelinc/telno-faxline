@@ -22,7 +22,7 @@ async function request(path, { method = 'GET', body, headers = {}, signal } = {}
     response = await fetch(path, init);
   } catch (error) {
     throw new ApiError(
-      error?.name === 'AbortError' ? 'Request cancelled.' : 'Cannot reach the Faxline server. Is it still running?',
+      error?.name === 'AbortError' ? 'Request cancelled.' : 'Cannot reach the Telno Faxline server. Is it still running?',
       0,
       null,
     );

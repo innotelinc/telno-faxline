@@ -190,7 +190,7 @@ export function buildFaxRender({
   cover.push(block.text(MARGIN, colY + 40, to || '—', { size: 11.5, font: 'mono', color: ink }));
 
   cover.push(block.text(MARGIN + 280, colY, 'FROM', { size: 7.5, font: 'mono', color: muted, tracking: 1.4 }));
-  cover.push(block.text(MARGIN + 280, colY + 20, settings.senderName || settings.workspaceName || 'Faxline', {
+  cover.push(block.text(MARGIN + 280, colY + 20, settings.senderName || settings.workspaceName || 'Telno Faxline', {
     size: 15,
     weight: 'bold',
     color: ink,
@@ -496,7 +496,7 @@ export function renderFaxPdf(pages, meta = {}) {
   const pdfDate = created.toISOString().replace(/[-:T]/g, '').slice(0, 14);
   setObject(
     infoId,
-    `<< /Title (${pdfString(meta.title || 'Fax transmission')}) /Producer (Faxline) /CreationDate (D:${pdfDate}Z) >>`,
+    `<< /Title (${pdfString(meta.title || 'Fax transmission')}) /Producer (Telno Faxline) /CreationDate (D:${pdfDate}Z) >>`,
   );
 
   const header = '%PDF-1.4\n%\u00e2\u00e3\u00cf\u00d3\n';

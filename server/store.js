@@ -885,7 +885,7 @@ function seedFaxes() {
     const rate = rateFor(quality);
     const cost = status === 'delivered' ? pages * rate : 0;
     const timeline = [
-      { at: created.toISOString(), status: 'queued', label: 'Queued', detail: 'Accepted by Faxline' },
+      { at: created.toISOString(), status: 'queued', label: 'Queued', detail: 'Accepted by Telno Faxline' },
     ];
     if (status !== 'queued') {
       timeline.push({

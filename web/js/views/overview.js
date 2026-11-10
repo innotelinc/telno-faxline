@@ -138,7 +138,7 @@ export async function render(ctx) {
     <section class="hero-send" aria-label="Quick send">
       <div class="hero-send__text">
         <p class="hero-send__title">Send a fax in seconds</p>
-        <p class="hero-send__sub">Enter a destination number — Faxline builds the cover page and estimates the cost.</p>
+        <p class="hero-send__sub">Enter a destination number — Telno Faxline builds the cover page and estimates the cost.</p>
       </div>
       <form class="hero-send__form" data-quick-send>
         <label class="sr-only" for="quick-to">Recipient fax number</label>

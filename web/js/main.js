@@ -133,9 +133,9 @@ function topbarHtml() {
   return `
     <header class="topbar">
       <button class="icon-btn hide-sm" data-action="toggle-nav" aria-label="Toggle sidebar" aria-expanded="false" aria-controls="sidebar">${icon('menu', 18)}</button>
-      <a class="brand" href="/overview" data-link aria-label="Faxline home">
+      <a class="brand" href="/overview" data-link aria-label="Telno Faxline home">
         <span class="brand__mark">${icon('printer', 16)}</span>
-        <span class="brand__name">Faxline</span>
+        <span class="brand__name">Telno Faxline</span>
       </a>
       <button class="ws-switch" data-action="open-palette" title="Switch workspace or search">
         <span class="ws-switch__dot"></span>
@@ -153,7 +153,7 @@ function topbarHtml() {
         ${icon(settings.theme === 'dark' ? 'moon' : 'sun', 16)}
       </button>
       <button class="account" data-action="open-account" aria-label="${esc(settings.userName || 'Account')} account menu">
-        <span class="account__avatar">${esc(initials(settings.userName || 'Faxline'))}</span>
+        <span class="account__avatar">${esc(initials(settings.userName || 'Telno Faxline'))}</span>
       </button>
     </header>`;
 }
@@ -181,7 +181,7 @@ function refreshChrome() {
     const themeBtn = top.querySelector('[data-action="cycle-theme"]');
     if (themeBtn) themeBtn.innerHTML = icon(settings.theme === 'dark' ? 'moon' : 'sun', 16);
     const avatar = top.querySelector('.account__avatar');
-    if (avatar) avatar.textContent = initials(settings.userName || 'Faxline');
+    if (avatar) avatar.textContent = initials(settings.userName || 'Telno Faxline');
   }
 }
 
@@ -258,7 +258,7 @@ async function renderRoute() {
   if (!viewRoot) return;
   const token = ++renderToken;
   const route = ROUTES[state.route] || ROUTES['/overview'];
-  document.title = `${route.title} — Faxline`;
+  document.title = `${route.title} — Telno Faxline`;
   if (currentTeardown) {
     try {
       currentTeardown();
@@ -882,7 +882,7 @@ function openAccount() {
         <div class="detail-meta__item"><span class="detail-meta__label">Provider</span><span class="detail-meta__value">${esc(state.provider?.name || '—')}</span></div>
         <div class="detail-meta__item"><span class="detail-meta__label">Mode</span><span class="detail-meta__value">${esc(state.provider?.mode || 'simulated')}</span></div>
       </div>
-      <div class="inline-note">Faxline runs as a single local workspace. Add access control in front of it before exposing the port publicly.</div>`,
+      <div class="inline-note">Telno Faxline runs as a single local workspace. Add access control in front of it before exposing the port publicly.</div>`,
     footer: `<a class="btn btn--secondary" href="/settings" data-link>Workspace settings</a>
       <button class="btn btn--primary" type="button" data-go-dev>Developer tools</button>`,
   });
@@ -903,7 +903,7 @@ async function boot() {
     const app = $('#app');
     app.hidden = false;
     app.innerHTML = `<div style="max-width:520px;margin:14vh auto;padding:24px">
-      <h1 class="page-title">Faxline cannot start</h1>
+      <h1 class="page-title">Telno Faxline cannot start</h1>
       <p class="page-sub" style="margin:8px 0 16px">${esc(error.message)}</p>
       <button class="btn btn--primary" onclick="location.reload()">Reload</button></div>`;
     return;

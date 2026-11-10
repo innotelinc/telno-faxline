@@ -1,0 +1,15 @@
+{
+  "name": "faxline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Faxline — an all-in-one fax platform: compose, send, receive, and audit faxes with a server-rendered document engine and pluggable provider adapters.",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "check": "node --check server.js && node --check server/api.js && node --check server/store.js && node --check server/render.js && node --check server/engine.js && node --check server/providers.js"
+  }
+}

@@ -1,0 +1,185 @@
+/*
+ * Faxline design tokens.
+ * Palette, spacing, radii, motion and elevation are shared by every view; a
+ * view never hard-codes a colour so the theme switch is a single attribute.
+ */
+
+:root {
+  --imperial-blue: #757cf2;
+  --aquamarine-green: #5be4bb;
+  --sin-orange: #ffac4d;
+  --carmine-pink: #ef4444;
+  --solitude-white: #e8edf5;
+  --eerie-black: #181c1f;
+
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  --fs-0: 0.6875rem;
+  --fs-1: 0.75rem;
+  --fs-2: 0.8125rem;
+  --fs-3: 0.875rem;
+  --fs-4: 1rem;
+  --fs-5: 1.125rem;
+  --fs-6: 1.375rem;
+  --fs-7: 1.75rem;
+  --fs-8: 2.125rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  --radius-control: 8px;
+  --radius-surface: 12px;
+  --radius-overlay: 14px;
+  --radius-round: 999px;
+
+  --border-width: 1px;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  --topbar-h: 56px;
+  --sidebar-w: 228px;
+  --content-max: 1220px;
+
+  --duration-fast: 120ms;
+  --duration-normal: 180ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  --z-sticky: 20;
+  --z-drawer: 60;
+  --z-modal: 70;
+  --z-palette: 80;
+  --z-toast: 90;
+
+  --font-feature: 'cv11', 'ss01';
+}
+
+/* -------------------------------------------------------------- light theme */
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-subtle: #f7f7f9;
+  --surface-muted: rgba(232, 237, 245, 0.45);
+  --surface-hover: #eef0ff;
+  --sidebar-bg: #ededf5;
+  --border: #dedfe9;
+  --border-subtle: rgba(1, 5, 7, 0.05);
+  --border-strong: #c9cbdc;
+  --fg: #181c1f;
+  --fg-soft: #2c3136;
+  --muted: #57575b;
+  --faint: #82838b;
+  --accent: #757cf2;
+  --accent-strong: #5b62e0;
+  --accent-soft: rgba(117, 124, 242, 0.12);
+  --accent-soft-strong: rgba(117, 124, 242, 0.2);
+  --accent-2: #189370;
+  --on-accent: #ffffff;
+  --primary: #5966c8;
+  --primary-hover: #4b58b5;
+  --on-primary: #ffffff;
+  --success: #12866a;
+  --success-soft: rgba(91, 228, 187, 0.18);
+  --success-border: rgba(24, 147, 112, 0.34);
+  --warning: #a96516;
+  --warning-soft: rgba(255, 172, 77, 0.18);
+  --warning-border: rgba(255, 172, 77, 0.42);
+  --danger: #c62f2f;
+  --danger-soft: rgba(239, 68, 68, 0.1);
+  --danger-border: rgba(239, 68, 68, 0.32);
+  --info: #5560c9;
+  --info-soft: rgba(117, 124, 242, 0.13);
+  --info-border: rgba(117, 124, 242, 0.32);
+  --chart-1: #757cf2;
+  --chart-2: #189370;
+  --chart-3: #e39a3c;
+  --chart-4: #d94848;
+  --ring: #a9b6ff;
+  --shadow-xs: 0 1px 2px rgba(1, 5, 7, 0.05);
+  --shadow-sm: 0 2px 8px rgba(1, 5, 7, 0.05);
+  --shadow-overlay: 0 18px 48px rgba(1, 5, 7, 0.14), 0 2px 8px rgba(1, 5, 7, 0.06);
+  --glass: rgba(255, 255, 255, 0.82);
+  --grid-line: rgba(1, 5, 7, 0.07);
+  --inverse-surface: #181c1f;
+  --inverse-fg: #e8edf5;
+  --skeleton: #eceef5;
+  --code-bg: #1d2226;
+  --code-fg: #dfe6f0;
+  --accent-gradient: radial-gradient(36rem 14rem at 8% 0%, rgba(117, 124, 242, 0.18), transparent 62%),
+    radial-gradient(30rem 14rem at 94% 4%, rgba(91, 228, 187, 0.14), transparent 60%);
+}
+
+/* --------------------------------------------------------------- dark theme */
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: oklch(0.185 0.012 285);
+  --surface: oklch(0.205 0.014 285);
+  --surface-raised: oklch(0.235 0.017 285);
+  --surface-subtle: #2d3338;
+  --surface-muted: rgba(232, 237, 245, 0.08);
+  --surface-hover: #30374b;
+  --sidebar-bg: #191a25;
+  --border: #343947;
+  --border-subtle: rgba(232, 237, 245, 0.09);
+  --border-strong: #4b5367;
+  --fg: #e8edf5;
+  --fg-soft: #d7dde7;
+  --muted: #b6bfcb;
+  --faint: #8b95a2;
+  --accent: #5be4bb;
+  --accent-strong: #7defcb;
+  --accent-soft: rgba(91, 228, 187, 0.14);
+  --accent-soft-strong: rgba(91, 228, 187, 0.22);
+  --accent-2: #757cf2;
+  --on-accent: #10161a;
+  --primary: #626daf;
+  --primary-hover: #737ec2;
+  --on-primary: #ffffff;
+  --success: #6fe9c3;
+  --success-soft: rgba(91, 228, 187, 0.16);
+  --success-border: rgba(91, 228, 187, 0.4);
+  --warning: #ffc078;
+  --warning-soft: rgba(255, 172, 77, 0.18);
+  --warning-border: rgba(255, 172, 77, 0.42);
+  --danger: #ff9090;
+  --danger-soft: rgba(239, 68, 68, 0.18);
+  --danger-border: rgba(239, 68, 68, 0.44);
+  --info: #a3a9ff;
+  --info-soft: rgba(117, 124, 242, 0.2);
+  --info-border: rgba(117, 124, 242, 0.42);
+  --chart-1: #8f96ff;
+  --chart-2: #5be4bb;
+  --chart-3: #ffac4d;
+  --chart-4: #ff8585;
+  --ring: #a9b6ff;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.28);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.24);
+  --shadow-overlay: 0 24px 64px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.32);
+  --glass: rgba(32, 37, 41, 0.86);
+  --grid-line: rgba(232, 237, 245, 0.09);
+  --inverse-surface: #e8edf5;
+  --inverse-fg: #181c1f;
+  --skeleton: #2f353a;
+  --code-bg: #14181b;
+  --code-fg: #dbe4ef;
+  --accent-gradient: radial-gradient(36rem 15rem at 6% 0%, rgba(91, 228, 187, 0.16), transparent 62%),
+    radial-gradient(30rem 14rem at 96% 6%, rgba(117, 124, 242, 0.22), transparent 62%);
+}
+
+[data-density='compact'] {
+  --space-4: 0.75rem;
+  --space-5: 1rem;
+  --space-6: 1.25rem;
+  --row-h: 40px;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-density="comfortable">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faxline — fax operations workspace</title>
+    <meta
+      name="description"
+      content="Faxline is an all-in-one fax platform: compose, send, receive and audit faxes with live delivery tracking."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/views.css" />
+    <script type="module" src="/js/main.js"></script>
+  </head>
+  <body>
+    <div class="boot" id="boot">
+      <div class="boot__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="5" y="9" width="22" height="15" rx="2" />
+          <path d="M5 13h22M10 9V6h12v3" />
+        </svg>
+      </div>
+      <p>Starting Faxline…</p>
+    </div>
+
+    <a class="skip-link" href="#main-view">Skip to content</a>
+    <div id="app" class="app" hidden></div>
+    <div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="false"></div>
+    <div id="overlay-root"></div>
+    <div id="palette-root"></div>
+
+    <noscript>
+      <p style="padding: 32px; font-family: sans-serif">
+        Faxline needs JavaScript enabled to render the workspace.
+      </p>
+    </noscript>
+  </body>
+</html>

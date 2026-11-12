@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node --disable-warning=ExperimentalWarning server.js",
     "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
-    "check": "node --check server.js && node --check server/api.js && node --check server/store.js && node --check server/render.js && node --check server/engine.js && node --check server/providers.js"
+    "check": "node --check server.js && node --check server/api.js && node --check server/store.js && node --check server/render.js && node --check server/engine.js && node --check server/providers.js",
+    "test": "node --test tests/api.test.js"
   }
 }

@@ -18,6 +18,21 @@ npm run check      # syntax-check the server modules
 The first boot seeds a 30-day demo workspace (numbers, contacts, 49 faxes,
 activity log) so every screen is populated immediately.
 
+## Tests
+
+```bash
+npm test
+```
+
+The suite boots a real server on an ephemeral port with its working directory
+pointed at a throwaway folder, so it exercises a fresh SQLite database without
+touching `data/`. It then drives the HTTP API end to end: bootstrap and stats,
+fax creation, validation, page rendering and PDF export, document upload and
+attachment, contacts, number provisioning, API keys and scopes, settings
+validation, signed provider webhooks, forced simulator failures, inbound
+simulation, and demo reset. No fixtures, credentials, or network access are
+needed; CI runs it on every push and pull request alongside the syntax checks.
+
 ## Screenshots
 
 ![Overview dashboard with delivery KPIs, volume chart and recent faxes](docs/screenshots/overview.png)

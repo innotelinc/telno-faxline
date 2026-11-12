@@ -11,8 +11,9 @@ permissions:
 
 jobs:
   check:
-    name: Syntax checks
+    name: Checks and API tests
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -30,3 +31,6 @@ jobs:
           for file in web/js/*.js web/js/views/*.js; do
             node --check "$file"
           done
+
+      - name: Run end-to-end API tests
+        run: npm test
